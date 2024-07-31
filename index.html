@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Horas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Horas de Proyectos</h1>
+        <div class="project-form">
+            <input type="text" id="projectName" placeholder="Nombre del Proyecto">
+            <button onclick="addProject()">Agregar Proyecto</button>
+        </div>
+        <div class="projects">
+            <h2>Proyectos</h2>
+            <ul id="projectList"></ul>
+        </div>
+        <div class="time-tracker">
+            <h2>Registrar Horas</h2>
+            <select id="projectSelect" onchange="loadHours()"></select>
+            <input type="number" id="hours" placeholder="Horas">
+            <button onclick="addHours()">Registrar Horas</button>
+        </div>
+        <div class="hours-display">
+            <h2>Horas Registradas Hoy</h2>
+            <table id="hoursTable">
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody id="hoursTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
